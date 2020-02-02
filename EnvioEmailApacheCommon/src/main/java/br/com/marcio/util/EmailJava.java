@@ -14,12 +14,12 @@ public class EmailJava {
         Email email = new SimpleEmail();
         email.setHostName("smtp.googlemail.com");
         email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator("marciofujikura@gmail.com", "vinicius07"));
+        email.setAuthenticator(new DefaultAuthenticator("seu-email ", " sua-senha"));
         email.setSSLOnConnect(true);
         email.setDebug(true);
 
         try {
-            email.setFrom("marciofujikura@gmail.com");
+            email.setFrom("email-destinatario");
             email.setSubject(assunto);
             email.setMsg(msg);
             email.addTo(destinatario);
